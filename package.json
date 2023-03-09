@@ -1,0 +1,18 @@
+{
+  "name": "nuxt-device-data-attr",
+  "version": "1.2.0",
+  "description": "",
+  "main": "src/nuxt.module.js",
+  "scripts": {
+    "prepublishOnly": "npm version patch --force"
+  },
+  "author": "Pilipenko Igor @dryymoon",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "@nuxtjs/device": "^2.1.0"
+  },
+  "peerDependencies": {
+    "nuxt": "^2.0.0"
+  }
+}
