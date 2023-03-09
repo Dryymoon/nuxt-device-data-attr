@@ -1,6 +1,6 @@
 {
   "name": "nuxt-device-data-attr",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "main": "src/nuxt.module.js",
   "scripts": {
