@@ -4,8 +4,15 @@ This nuxt module add additional css selectors on body tag for resolve device.
 ```html
 <body is-desktop is-desktop-or-tablet>
   <style>
-    [is-desktop] .someClass {
+    [is-mobile] .someClass {
       color: red;
+    }
+
+    /* fallback when nuxt-device-data-attr is not available */
+    @media (max-width: 768px) { {
+      body:not([is-device]) .someClass {
+        color: red;
+      }
     }
   </style>
   <div class="someClass">
@@ -14,7 +21,8 @@ This nuxt module add additional css selectors on body tag for resolve device.
 </body>
 ```
 
-## Available css selectors:
+## Available css selectors on body:
+* **is-device** (always added)
 * is-desktop
 * is-mobile
 * is-tablet

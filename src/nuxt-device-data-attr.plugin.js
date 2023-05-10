@@ -27,6 +27,7 @@ export default function (ctx) {
         attrs = pickBy(attrs, v => v);
         attrs = mapValues(attrs, () => '');
         attrs = mapKeys(attrs, (v, k) => kebabCase(k));
+        attrs.unshift('is-device')
 
         this._deviceDataAttrMeta.set({ bodyAttrs: attrs, });
       }
