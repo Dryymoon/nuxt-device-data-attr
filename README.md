@@ -2,7 +2,7 @@
 
 This nuxt module add additional css selectors on body tag for resolve device.
 ```html
-<body is-desktop is-desktop-or-tablet>
+<body is-device is-desktop is-desktop-or-tablet>
   <style>
     [is-mobile] .someClass {
       color: red;
