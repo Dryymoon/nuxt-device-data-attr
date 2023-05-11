@@ -16,13 +16,9 @@ module.exports = function () {
 
   this.requireModule('@nuxtjs/device');
 
-  const template = this.addTemplate({
-    fileName: 'nuxt-device-data-attr.plugin.js',
-    src: require('path').resolve(__dirname, 'nuxt-device-data-attr.plugin.js')
-  });
-  const plugin = { src: require('path').join(this.options.buildDir, template.dst) };
-
-  this.options.plugins.push(plugin);
+  this.options.plugins.push(
+    require.resolve('./nuxt-device-data-attr.plugin.js'),
+  );
 };
 
 module.exports.meta = require('../package.json');
