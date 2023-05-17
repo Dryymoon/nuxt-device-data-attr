@@ -6,8 +6,6 @@ import pickBy from 'lodash/pickBy';
 export default function (ctx) {
   if (!ctx.$device) throw new Error('Plugin device-data-attr.js require @nuxt/device plugin');
 
-  if (process.server && process.static) return;
-
   ctx.app.mixins = ctx.app.mixins || [];
 
   ctx.app.mixins.push({
